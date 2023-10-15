@@ -1,0 +1,102 @@
+body{
+    background-color: black;
+    font-family: "Sitka Text";
+    color: darkmagenta;
+    font-size: x-large;
+    margin: 0;
+    box-sizing:border-box;
+    text-align: center;
+}
+
+
+
+/*Меню*/
+.menu{
+    background-color: darkblue;
+    line-height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu a{
+    color: darkmagenta;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    background-color: blue;
+    color: hotpink;
+    box-shadow: 0 0 1em blue;
+}
+
+/*Центральный див*/
+.center-div{
+    width: max-content;
+    margin: auto;
+}
+
+/*Вертикальная таблица*/
+.vertical-table{
+    border-spacing: 1em 1em;
+}
+
+.vertical-table td{
+    text-align: center;
+    width: 20em;
+    height: 3em;
+    border: 1px solid blue;
+    box-shadow: 0 0 1em blue;
+    margin: 1em;
+}
+
+.vertical-table td:first-child{
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    font-weight: bold;
+}
+
+.vertical-table td:nth-child(2){
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    overflow: hidden;
+}
+
+/*Форма регистрации*/
+.regform input{
+    width: 100%;
+    height: 1em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    padding: 1em;
+    border: none;
+    line-height: 1em;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background-color: lightgray;
+}
+
+.regform input:focus{
+    background-color: blue;
+    color: hotpink;
+    outline: none;
+}
+
+.regform input[type=submit]{
+    width: 41.5em;
+    border-radius: 2em;
+    height: 3em;
+    background-color: darkblue;
+    font-weight: bold;
+    box-shadow: 0 0 1em darkblue;
+}
+
+.regform input[type=submit]:hover {
+    background-color: blue;
+    color: hotpink;
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация пользователей</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+    {% block menu %}
+        <div class="menu">
+            <a href="{% url 'index' %}">Главная</a>
+            {% if user.username %}
+                <a href="{% url 'logout' %}">Выйти</a>
+            {% else %}
+                <a href="{% url 'signup' %}">Зарегистрироваться</a>
+                <a href="{% url 'signin' %}">Войти</a>
+            {% endif %}
+            <a href="{% url 'userlist' %}">Все пользователи</a>
+            <a href="{% url 'admin:index' %}">Админка</a>
+        </div>
+    {% endblock menu %}
+
+    {% block content %}
+        <div class="center-div">
+            <h1>Данные пользователя</h1>
+            <table class="vertical-table">
+                <tr><td>Имя:</td><td>{{ user.first_name }}</td></tr>
+                <tr><td>Фамилия:</td><td>{{ user.last_name }}</td></tr>
+                <tr><td>Имя пользователя:</td><td>{{ user.username }}</td></tr>
+                <tr><td>Почта:</td><td>{{ user.email }}</td></tr>
+            </table>
+        </div>
+    {% endblock content %}
+
+</body>
+</html>
