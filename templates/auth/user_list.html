@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="center-div">
+        <h1>Все пользователи</h1>
+        <table class="vertical-table head-up">
+            <tr>
+                <td>Имя пользователя</td>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Почта</td>
+            </tr>
+            {% for u in user_list %}
+                <tr>
+                    <td>{{ u.username }}</td>
+                    <td>{{ u.first_name }}</td>
+                    <td>{{ u.last_name }}</td>
+                    <td>{{ u.email }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock content %}

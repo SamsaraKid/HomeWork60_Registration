@@ -3,9 +3,9 @@
 {% block content %}
     <div class="center-div">
         <h1>Регистрация пользователя</h1>
-        <form action="" method="post" class="regform">
+        <form action="" method="post" class="form">
             {% csrf_token %}
-            <table class="vertical-table">
+            <table class="vertical-table head-left">
                 {% for i in regform %}
                     <tr>
                         <td>{{ i.label_tag }}</td>

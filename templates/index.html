@@ -15,7 +15,7 @@
                 <a href="{% url 'logout' %}">Выйти</a>
             {% else %}
                 <a href="{% url 'signup' %}">Зарегистрироваться</a>
-                <a href="{% url 'signin' %}">Войти</a>
+                <a href="{% url 'login' %}">Войти</a>
             {% endif %}
             <a href="{% url 'userlist' %}">Все пользователи</a>
             <a href="{% url 'admin:index' %}">Админка</a>
@@ -25,7 +25,7 @@
     {% block content %}
         <div class="center-div">
             <h1>Данные пользователя</h1>
-            <table class="vertical-table">
+            <table class="vertical-table head-left">
                 <tr><td>Имя:</td><td>{{ user.first_name }}</td></tr>
                 <tr><td>Фамилия:</td><td>{{ user.last_name }}</td></tr>
                 <tr><td>Имя пользователя:</td><td>{{ user.username }}</td></tr>

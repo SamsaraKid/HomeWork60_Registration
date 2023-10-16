@@ -8,8 +8,6 @@ body{
     text-align: center;
 }
 
-
-
 /*Меню*/
 .menu{
     background-color: darkblue;
@@ -46,7 +44,8 @@ body{
 
 .vertical-table td{
     text-align: center;
-    width: 20em;
+    width: 15em;
+    /*width: 15%;*/
     height: 3em;
     border: 1px solid blue;
     box-shadow: 0 0 1em blue;
@@ -56,17 +55,16 @@ body{
 .vertical-table td:first-child{
     border-top-left-radius: 2em;
     border-bottom-left-radius: 2em;
-    font-weight: bold;
 }
 
-.vertical-table td:nth-child(2){
+.vertical-table td:last-child{
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
     overflow: hidden;
 }
 
 /*Форма регистрации*/
-.regform input{
+.form input{
     width: 100%;
     height: 1em;
     border-top-right-radius: 2em;
@@ -80,14 +78,14 @@ body{
     background-color: lightgray;
 }
 
-.regform input:focus{
+.form input:focus{
     background-color: blue;
     color: hotpink;
     outline: none;
 }
 
-.regform input[type=submit]{
-    width: 41.5em;
+.form input[type=submit]{
+    width: 31.5em;
     border-radius: 2em;
     height: 3em;
     background-color: darkblue;
@@ -95,8 +93,13 @@ body{
     box-shadow: 0 0 1em darkblue;
 }
 
-.regform input[type=submit]:hover {
+.form input[type=submit]:hover{
     background-color: blue;
     color: hotpink;
     cursor: pointer;
+}
+
+.head-up tr:first-child td, .head-left td:first-child{
+    font-weight: bold;
+    background-color: darkblue;
 }
