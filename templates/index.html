@@ -26,7 +26,7 @@
         <div class="center-div">
             <h1>Данные пользователя</h1>
             <table class="vertical-table head-left">
-                <tr><td>Имя:</td><td>{{ user.first_name }}</td></tr>
+                <tr><td>Имя:</td><td>{% if user.username %}{{ user.first_name }}{% else %}Guest{% endif %}</td></tr>
                 <tr><td>Фамилия:</td><td>{{ user.last_name }}</td></tr>
                 <tr><td>Имя пользователя:</td><td>{{ user.username }}</td></tr>
                 <tr><td>Почта:</td><td>{{ user.email }}</td></tr>

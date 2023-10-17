@@ -45,7 +45,6 @@ body{
 .vertical-table td{
     text-align: center;
     width: 15em;
-    /*width: 15%;*/
     height: 3em;
     border: 1px solid blue;
     box-shadow: 0 0 1em blue;
@@ -102,4 +101,16 @@ body{
 .head-up tr:first-child td, .head-left td:first-child{
     font-weight: bold;
     background-color: darkblue;
+}
+
+.head-up td{
+    width: 12em;
+}
+
+.errorlist{
+    padding: 0;
+}
+
+.errorlist li{
+    list-style-type: none;
 }
